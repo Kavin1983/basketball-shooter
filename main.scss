@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Source Code Pro", monospace;
+}
+
+:root {
+  --color-grey: rgb(94, 94, 94);
+  --canvas-color: rgb(31, 30, 30);
+  --color-blue: rgb(52, 125, 235);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--canvas-color);
+  cursor: pointer;
+}
+
+.colors {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  z-index: 100;
+  background-color: #f3f0f0;
+  width: 30rem;
+  height: 30rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 4px;
+  box-shadow: 10px 3px 3px var(--color-grey);
+
+  &__row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  &__color {
+    cursor: pointer;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 1px 2px 3px var(--color-grey);
+  }
+}
+
+.settings {
+  &-btn {
+    z-index: 1000;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+
+  &--settings,
+  &--checkmark {
+    fill: white;
+  }
+}
+.hidden {
+  display: none;
+}
+.made-by {
+  z-index: 100000;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.score {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  z-index: 100000;
+  color: rgb(14, 216, 14);
+  font-size: 4rem;
+}
+
+.warning {
+  transform: translateX(-100%);
+  transition: all 0.4s;
+  z-index: 100000;
+  position: absolute;
+  top: 7rem;
+  left: 20rem;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 0;
+}
+
+.skip {
+  cursor: pointer;
+  z-index: 10000;
+  position: absolute;
+  top: 2rem;
+  right: 12rem;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 2rem;
+  background-color: var(--color-blue);
+  color: #fff;
+}

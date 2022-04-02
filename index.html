@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball shooter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="settings-menu hidden">
+        <div class="colors">
+          <div class="colors__row">
+            <button class="colors__color" data-color="red"></button>
+            <button class="colors__color" data-color="blue"></button>
+            <button class="colors__color" data-color="green"></button>
+          </div>
+          <div class="colors__row">
+            <button class="colors__color" data-color="yellow"></button>
+            <button class="colors__color checked" data-color="orange">
+              <svg class="icon icon--checkmark">
+                <use href="icons.svg#icon-checkmark"></use>
+              </svg>
+            </button>
+            <button class="colors__color" data-color="purple"></button>
+          </div>
+          <div class="colors__row">
+            <button class="colors__color" data-color="lime"></button>
+            <button class="colors__color" data-color="cyan"></button>
+            <button class="colors__color" data-color="pink"></button>
+          </div>
+
+          <div class="colors__row">
+            <button class="colors__color" data-color="teal"></button>
+            <button class="colors__color" data-color="lightblue"></button>
+            <button class="colors__color" data-color="maroon"></button>
+          </div>
+        </div>
+      </div>
+      <span class="score">0</span>
+      <span class="made-by"></span>
+      <span class="warning">Press any key to move on or reset</span>
+      <button class="skip">Skip</button>
+      <button class="settings-btn">
+        <svg class="icon icon--settings">
+          <use href="icons.svg#icon-cog"></use>
+        </svg>
+      </button>
+      <canvas id="canvas"></canvas>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
